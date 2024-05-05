@@ -1,0 +1,17 @@
+/* Add these styles to your Review.css file */
+.card-container {
+    height: 400px;
+    max-width: 385px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(14, 148, 193, 0.5);
+  }
+  
+  .even-slide {
+    background-color: rgba(186, 224, 236, 0.5);
+  }
+  
+  .odd-slide {
+    background-color: rgba(226, 235, 238, 0.5);
+  }
+  

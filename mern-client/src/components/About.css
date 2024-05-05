@@ -1,0 +1,27 @@
+.developer-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .developer-card {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .image-frame {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto; /* Make sure the image maintains its aspect ratio */
+    border-radius: 10px;
+  }
+  
+  .text-center {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
