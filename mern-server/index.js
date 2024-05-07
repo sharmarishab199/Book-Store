@@ -87,9 +87,9 @@ async function run() {
 run().catch(console.dir);
 
 
-app.get('/',(req,res)=>{
-    res.send('Hello W')
-})
+// app.get('/',(req,res)=>{
+//     res.send('Hello W')
+// })
 
 // deployment config
 const path = require('path');

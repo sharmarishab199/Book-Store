@@ -27,7 +27,7 @@ const router = createBrowserRouter([
             {path:'/shop',element:<Shop/>},
             {path:'/about',element:<About/>},
             // {path:'/blog',element:<Blog/>},
-            {path:'/book/:id',element:<SingleBook/>,loader:({params})=>fetch(`http://localhost:5000/book/${params.id}`)}
+            {path:'/book/:id',element:<SingleBook/>,loader:({params})=>fetch(`/book/${params.id}`)}
         ]
     },
     {
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
             {path:"/admin/dashboard",element:<PrivateRoute> <Dashboard/> </PrivateRoute> },
             {path:"/admin/dashboard/upload",element:<UploadBook/>},
             {path:"/admin/dashboard/manage",element:<ManageBooks/>},
-            {path:"/admin/dashboard/edit-books/:id",element:<EditBooks/>,loader:({params})=>fetch(`http://localhost:5000/book/${params.id}`)},
+            {path:"/admin/dashboard/edit-books/:id",element:<EditBooks/>,loader:({params})=>fetch(`/book/${params.id}`)},
 
         ]
     },

@@ -6,12 +6,12 @@ const Shop = () => {
   const [books, setBooks] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:5000/all-books").then(res => res.json()).then(data => setBooks(data))
+    fetch("/all-books").then(res => res.json()).then(data => setBooks(data))
   }, [])
   return (
-    <div className='mt-28 px-4 lg:px24'>
+    <div className='px-4 mt-28 lg:px24'>
       <h2 className='text-5xl font-bold text-center'>All Books are here</h2>
-      <div className='grid gap-8 my-12 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 grid-cols-1'>
+      <div className='grid grid-cols-1 gap-8 my-12 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3'>
         {
           books.map((book) => {
             return (<Card className="max-w-sm" key={book}>
@@ -23,7 +23,7 @@ const Shop = () => {
                 {book.bookDescription.substring(0,300)}
               </p>
               <Link to={`/book/${book._id}`} 
-              className='bg-blue-700 font-semibold text-white py-2 rounded text-center'>
+              className='py-2 font-semibold text-center text-white bg-blue-700 rounded'>
                 Buy Now
               </Link>
             </Card>)
